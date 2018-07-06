@@ -2,7 +2,7 @@ package model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;//¡¨Ω”
+import java.sql.SQLException;//√Å¬¨¬Ω√ì
 
 import jFrame.Login;
 import jFrame.Tip;
@@ -14,8 +14,8 @@ public class DBConnect {
   try {
    Class.forName("com.mysql.jdbc.Driver");
    conn = DriverManager.getConnection(
-     "jdbc:mysql://localhost:3306;databaseName=ok", "root",
-     "1234");
+     "jdbc:mysql://localhost:3306/wms?useUnicode=true&characterEncoding=utf-8&useSSL=true", "root",
+     "123456");
    System.out.println("ok");
   } catch (ClassNotFoundException e) {
    e.printStackTrace();
@@ -23,7 +23,7 @@ public class DBConnect {
    e.printStackTrace();
   }
   return conn;
- }//πÿ±’ 
+ }//¬π√ò¬±√ï 
  public void closeConnect(Connection conn) {
   if (conn != null) {
    try {
